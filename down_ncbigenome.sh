@@ -16,7 +16,7 @@ set -u
 # ==========================================
 BUSCO_LINEAGE=$1
 OUTPUT_DIR="AssemblyQC"
-NUM_THREADS=4
+NUM_THREADS=${2:-4}  # Usa el segundo argumento o 4 por defecto
 ASSEMBLIES=("GCA_011022315.1" "GCA_031590215.1" "GCA_050947715.1")
 
 if [ -z "$BUSCO_LINEAGE" ]; then
